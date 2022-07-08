@@ -1,16 +1,16 @@
 # Project
-This project is ready to local development empty boilerplate for wordpress development.
+This project is ready to local development empty boilerplate for WordPress.
 
 ## Features
 
-### Wordpress
+### WordPress
 - [WordPress 6.0](https://wordpress.org/)
 - [WP-CLI](https://wp-cli.org/fr/)
 - [Sage theme](https://roots.io/sage/)
 - [Bedrock project structure](https://roots.io/bedrock/)
 
-###
-- composer insider docker container
+### Server side
+- Composer insider docker container 😍
 - nginx (with configs)
 - php 8.1
 - mysql
