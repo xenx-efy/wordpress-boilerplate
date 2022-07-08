@@ -1,15 +1,30 @@
 # Project
+
 This project is ready to local development empty boilerplate for WordPress.
+
+## Project structure info
+```shell
+- etc # config files for docker
+- src # all site's source files
+  - config # site configs for development, staging and live environments
+  - web # site entrypoint directory (here is index.php for server)
+    - app # here live all code what we will be write
+    - wp # here live WordPress core files (you shouldn't touch this folder)
+- shared-files # contains server logs and database backup
+- docker-compose.yml # docker-compose config file
+```
 
 ## Features
 
 ### WordPress
+
 - [WordPress 6.0](https://wordpress.org/)
 - [WP-CLI](https://wp-cli.org/fr/)
 - [Sage theme](https://roots.io/sage/)
 - [Bedrock project structure](https://roots.io/bedrock/)
 
 ### Server side
+
 - Composer insider docker container 😍
 - nginx (with configs)
 - php 8.1
@@ -47,7 +62,9 @@ This project is ready to local development empty boilerplate for WordPress.
     - MYSQL_USER=mysql
     - MYSQL_PASSWORD=mysql
 
-5. Go to [http://localhost](http://localhost)
+5. Apply `sudo chmod 777 -R src` on src directory. It should prevent errors when you'll change theme.
+
+6. Go to [http://localhost](http://localhost)
    If you want to have custom local domain you can find this
    inside `<project_root>/etc/nginx/default.template.conf` `server_name` parameter.
    Add after changing add this domain to `/etc/hosts` file like here `127.0.0.1 sage.loc`
